@@ -13,22 +13,11 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_sample_node2_bb .
-
-  pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock1_sample_node2_bb
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
     - ls -al
    # - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
-
-  post_ci:
-    - docker push shippabledocker/shiphitchcock1_sample_node2_bb
 
 integrations:
   hub:
@@ -39,22 +28,22 @@ integrations:
       type: email
       recipients:
         - shiphitchcock1@gmail.com
-      on_start: always
-      on_success: change
-      on_failure: never
+      on_start: never
+      #on_success: always
+      #on_failure: always
     - integrationName: ship-slack
       type: slack
       recipients:
         - "#public-chnl"
         - pvt-channel
-      on_start: always
-      on_success: change
-      on_failure: never
+      on_start: never
+      #on_success: change
+      #on_failure: never
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-irc"
-      on_start: always
-      on_success: change
-      on_failure: never
+      on_start: never
+     # on_success: change
+      #on_failure: never
       
