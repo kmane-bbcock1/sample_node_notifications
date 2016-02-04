@@ -41,6 +41,9 @@ integrations:
       on_start:
       on_success: always
       on_failure: always
+      branches:
+        only:
+          - notifications
  
    # - integrationName: irc
     #  type: irc
