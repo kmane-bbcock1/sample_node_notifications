@@ -21,15 +21,7 @@ build:
 
 integrations:
     - integrationName: ship-slack
-      type: slack
-      recipients: 
-        - "#hitchcock1-public"
-        - pvt-channel
-      on_start: always
-      on_success: always
-      on_failure: always 
-    - integrationName: ship-sck
-      type: slack
+      type: test
       recipients: 
         - "#hitchcock1-public"
         - pvt-channel
