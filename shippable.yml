@@ -33,7 +33,7 @@ integrations:
       #on_success: always
       #on_failure: always
 
-    #- integrationName: ship-slack
+    - integrationName: ship-slack
       type: slack
       recipients:
         - @shiphitchcock1@gmail.com
