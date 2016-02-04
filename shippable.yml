@@ -30,7 +30,7 @@ integrations:
         - shiphitchcock1@gmail.com
         #- varsha@shippable.com
       on_start:
-      on_success: change
+      on_success: always
       #on_failure: always
 
     - integrationName: ship-slack
@@ -39,7 +39,7 @@ integrations:
         - "#hitchcock1-public"
         - pvt-channel
       on_start:
-      on_success: change
+      on_success: always
       #on_failure: always
  
     - integrationName: irc
@@ -47,6 +47,6 @@ integrations:
       recipients: 
         - "chat.freenode.net#test-cock"
       on_start:
-      on_success: change
+      on_success: always
       #on_failure: always
     
