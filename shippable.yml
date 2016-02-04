@@ -47,7 +47,7 @@ integrations:
       branches:
         only:
           - notifications
-          - 764724
+          - %$$^764724
     - integrationName: irc
       type: irc
       recipients: 
