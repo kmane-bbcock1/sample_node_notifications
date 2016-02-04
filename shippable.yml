@@ -24,11 +24,26 @@ integrations:
     - integrationName: ship-docker
       type: docker
   notifications:
-    - integrationName: ship-slack
-      type: slack
-      recipients:
-        - shiphitchcock1@gmail.com
+    - integrationName: email
+      type: EMAIL
+    #  recipients:
+     #   - shiphitchcock1@gmail.com
       on_start: always
       on_success: always
       on_failure: always
+    - integrationName: ship-slack
+      type: slack
+    #  recipients:
+     #   - "#hitchcock1-public"
+      #  - pvt-channel
+      on_start: always
+      on_success: always
+      on_failure: always
+    - integrationName: irc
+      type: irc
+     # recipients:
+      #  - "chat.freenode.net#test-cock"
+      on_start: always
+      on_success: always
+      on_failure: always 
     
