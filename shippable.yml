@@ -29,8 +29,7 @@ integrations:
       on_start:
       on_success: always
       on_failure: always
-    - integrationName: ship-slack12
-      type: slack
+    - integrationName: 123
       recipients: 
         - "#hitchcock1-public"
         - pvt-channel
