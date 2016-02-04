@@ -20,12 +20,12 @@ build:
    # - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
 integrations:
-    - integrationName: +_(^@$
+    - integrationName: ship-slack
       type: slack
-      recipients: 
-        - "#hitchcock1-public"
-        - pvt-channel
-      on_start:
+     # recipients: 
+      #  - "#hitchcock1-public"
+       # - pvt-channel
+      on_start: always
       on_success: always
       on_failure: always 
     
