@@ -33,7 +33,7 @@ integrations:
       #on_success: always
       #on_failure: always
 
-    - integrationName: ship-slack
+    #- integrationName: ship-slack
       type: slack
       recipients:
         - "#hitchcock1-public"
@@ -41,9 +41,6 @@ integrations:
       on_start:
       on_success: always
       on_failure: always
-      branches:
-        only:
-          - notifications
  
    # - integrationName: irc
     #  type: irc
