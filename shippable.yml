@@ -20,7 +20,7 @@ build:
    # - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
 integrations:
-    - integrationName: 123
+    - integrationName: +_(^@$
       recipients: 
         - "#hitchcock1-public"
         - pvt-channel
