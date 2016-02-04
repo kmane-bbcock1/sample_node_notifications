@@ -29,7 +29,7 @@ integrations:
       recipients: 
         - shiphitchcock1@gmail.com
         #- varsha@shippable.com
-      on_start: always
+      on_start:
       #on_success: always
       #on_failure: change
 
@@ -38,7 +38,7 @@ integrations:
       recipients: 
         - "#hitchcock1-public"
         - pvt-channel
-      on_start: always
+      on_start:
       #on_success: always
       #on_failure: change
  
@@ -46,7 +46,7 @@ integrations:
       type: irc
       recipients: 
         - "chat.freenode.net#test-cock"
-      on_start: always
+      on_start:
       #on_success: always
       #on_failure: change
     
