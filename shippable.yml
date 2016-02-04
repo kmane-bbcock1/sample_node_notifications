@@ -31,7 +31,7 @@ integrations:
         - varsha@shippable.com
     #  on_start: always
       on_success: always
-      on_failure: always
+      on_failure: change
 
     - integrationName: ship-slack
       type: slack
@@ -40,7 +40,7 @@ integrations:
         - pvt-channel
      # on_start: always
       on_success: always
-      on_failure: always
+      on_failure: change
  
     - integrationName: irc
       type: irc
@@ -48,5 +48,5 @@ integrations:
         - "chat.freenode.net#test-cock"
       #on_start: always
       on_success: always
-      on_failure: always
+      on_failure: change
     
