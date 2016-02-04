@@ -13,31 +13,18 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_sample_node2_bb .
-
-  pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock1_sample_node2_bb
-    image_tag: latest
-    pull: false
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - ps -eax
     - ls -al
-
-  post_ci:
-    - docker push shippabledocker/shiphitchcock1_sample_node2_bb
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
   notifications:
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-cock"
       #on_start: always
-      on_success: always
-    #  on_failure: always 
+     # on_success: always
+      on_failure: always 
