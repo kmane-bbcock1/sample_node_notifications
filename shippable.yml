@@ -32,7 +32,7 @@ integrations:
       on_start: always
       on_success: always
       on_failure: always
-      branch:
+      branches:
         only:
           - master
     - integrationName: ship-slack
@@ -44,7 +44,7 @@ integrations:
       on_start: always
       on_success: always
       on_failure: always
-      branch:
+      branches:
         only:
           - notifications
     - integrationName: irc
