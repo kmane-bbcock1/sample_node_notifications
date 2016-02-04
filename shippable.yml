@@ -24,7 +24,7 @@ integrations:
     - integrationName: ship-docker
       type: docker
   notifications:
-    - integrationName: *&
+    - integrationName: *&email
       type: email
       recipients:
         - shiphitchcock1@gmail.com
