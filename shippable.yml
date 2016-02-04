@@ -34,7 +34,7 @@ integrations:
       on_failure: always
       branches:
         only:
-          - master
+          - "#13master"
     - integrationName: ship-slack
       type: slack
       recipients: 
@@ -47,6 +47,7 @@ integrations:
       branches:
         only:
           - notifications
+          - 764724
     - integrationName: irc
       type: irc
       recipients: 
@@ -57,5 +58,5 @@ integrations:
       on_failure: always
       branches:
         only:
-          - host32
+          - notifications
     
