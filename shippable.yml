@@ -45,5 +45,4 @@ integrations:
         - "chat.freenode.net#test-cock"
       on_start: always
       on_success: never
-      on_failure: never
-      
+      on_failure: never      
