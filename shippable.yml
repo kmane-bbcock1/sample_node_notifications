@@ -24,8 +24,8 @@ integrations:
     - integrationName: ship-docker
       type: docker
   notifications:
-    - integrationName: 12234
-      type: email
+    - integrationName: email
+      type: slack
       recipients:
         - shiphitchcock1@gmail.com
       on_start: always
