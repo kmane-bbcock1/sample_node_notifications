@@ -24,16 +24,24 @@ integrations:
     - integrationName: ship-docker
       type: docker
   notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - shiphitchcock1@gmail.com
+   # - integrationName: email
+    #  type: email
+    #  recipients: 
+    #    - shiphitchcock1@gmail.com
         #- varsha@shippable.com
-      on_start:
-      on_success: always
+     # on_start:
+      #on_success: always
       #on_failure: always
 
-    - integrationName: ship-slack12
+    - integrationName: ship-slack
+      type: slack
+      recipients: 
+        - "#hitchcock1-public"
+        - pvt-channel
+      on_start:
+      on_success: always
+      on_failure: always
+    - integrationName: ship-slacka
       type: slack
       recipients: 
         - "#hitchcock1-public"
