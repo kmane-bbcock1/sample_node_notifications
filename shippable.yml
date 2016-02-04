@@ -26,14 +26,14 @@ integrations:
   notifications:
     - integrationName: email
       type: email
-      recipients: shiphitchcock1
+      recipients: shiphitchcock1@gmail.com
         #- varsha@shippable.com
       on_start: always
       on_success: always
       on_failure: always
     - integrationName: ship-slack
       type: slack
-      recipients: "#hitchcock1-public1233"
+      recipients: "#hitchcock1-public"
         #"#general"
         #pvt-channel765
       on_start: always
