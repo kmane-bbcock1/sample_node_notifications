@@ -20,18 +20,6 @@ build:
    # - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
 integrations:
-  hub:
-    - integrationName: ship-docker
-      type: docker
-  notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - shiphitchcock1@gmail.com
-        #- varsha@shippable.com
-      on_start:
-      on_success: always
-      #on_failure: always
 
     - integrationName: ship-slack
       type: slack
@@ -40,13 +28,13 @@ integrations:
         - pvt-channel
       on_start:
       on_success: always
-      #on_failure: always
- 
-    - integrationName: irc
-      type: irc
+      on_failure: always
+    - integrationName: ship-slack12
+      type: slack
       recipients: 
-        - "chat.freenode.net#test-cock"
+        - "#hitchcock1-public"
+        - pvt-channel
       on_start:
       on_success: always
-      #on_failure: always
+      on_failure: always
     
