@@ -26,22 +26,31 @@ integrations:
   notifications:
     - integrationName: email
       type: email
-      recipients: shiphitchcock1@gmail.com
+      recipients: 
+        - shiphitchcock1@gmail.com
         #- varsha@shippable.com
       on_start: always
       on_success: always
       on_failure: always
+      branch:
+        only:
+          - master
     - integrationName: ship-slack
       type: slack
-      recipients: "#hitchcock1-public"
+      recipients: 
+        - "#hitchcock1-public"
         #"#general"
-        #pvt-channel765
+        - #pvt-channel765
       on_start: always
       on_success: always
       on_failure: always
+      branch:
+        only:
+          - notifications
     - integrationName: irc
       type: irc
-      recipients: "chat.freenode.net#test-cock"
+      recipients: 
+        - "chat.freenode.net#test-cock"
        # "chat.freenode.net#test-cock1"
       on_start: always
       on_success: always
