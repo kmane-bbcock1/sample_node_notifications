@@ -41,7 +41,7 @@ integrations:
       on_start:
       on_success: always
       on_failure: always
-    - integrationName: ship-slacka
+    - integrationName: ship-slack
       type: slack
       recipients: 
         - "#hitchcock1-public"
