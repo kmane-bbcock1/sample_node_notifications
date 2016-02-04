@@ -17,7 +17,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-   # - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
+    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
 integrations:
   hub:
@@ -29,7 +29,7 @@ integrations:
       recipients:
         - shiphitchcock1@gmail.com
       on_start: always
-      on_success: always
+      on_success: change
       on_failure: CHANGE
     - integrationName: ship-slack
       type: slack
@@ -37,13 +37,13 @@ integrations:
         - "#hitchcock1-public"
         - pvt-channel
       on_start: always
-      on_success: always
+      on_success: change
       on_failure: change
     - integrationName: irc
       type: irc
       recipients:
         - "chat.freenode.net#test-cock"
       on_start: always
-      on_success: always
+      on_success: change
       on_failure: change
       
