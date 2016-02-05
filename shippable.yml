@@ -29,17 +29,17 @@ integrations:
     - integrationName: ship-docker
       type: docker
   notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - shiphitchcock1@gmail.com
+   # - integrationName: email
+    #  type: email
+     # recipients: 
+      #  - shiphitchcock1@gmail.com
         #- varsha@shippable.com
       #on_start:
       #on_success: always
       #on_failure: always
 
     - integrationName: ship-slack
-      type: email
+      type: slack
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
