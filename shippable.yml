@@ -21,8 +21,8 @@ build:
     
   post_ci:
     #- docker build --rm -t=shippabledocker/varsha-postci-node .
-    - docker tag -f drydock/u14nod:prod shippabledocker/varsha-postci-node
-    - docker push shippabledocker/varsha-postci-node
+    - docker tag -f drydock/u14nod:prod shippabledocker/varsha-postci-node12
+    - docker push shippabledocker/varsha-postci-node12
 
 integrations:
   hub:
