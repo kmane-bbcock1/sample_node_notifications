@@ -39,7 +39,7 @@ integrations:
       #on_failure: always
 
     - integrationName: ship-slack
-      type: slack
+      type: email
       recipients:
         - "#hitchcock1-public"
         - pvt-channel
