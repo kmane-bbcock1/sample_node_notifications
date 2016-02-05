@@ -21,8 +21,8 @@ build:
     
   post_ci:
     #- docker build --rm -t=shippabledocker/varsha-postci-node .
-    - docker tag -f drydock/u14nod:prod shippabledocker/varsha-postci-node12
-    - docker push shippabledocker/varsha-postci-node12
+    - docker tag -f drydock/u14nod:prod shippabledocker/varsha-postci-node123
+    - docker push shippabledocker/varsha-postci-node123
 
 integrations:
   hub:
@@ -44,7 +44,7 @@ integrations:
         - "#hitchcock1-public"
         - pvt-channel
       #on_start:
-      #on_success: always
+      on_success: always
       #on_failure: always
  
     - integrationName: irc
@@ -52,6 +52,6 @@ integrations:
       recipients: 
         - "chat.freenode.net#test-cock"
       #on_start:
-      #on_success: always
-      #on_failure: always    
+      on_success: always
+      on_failure: never    
     
