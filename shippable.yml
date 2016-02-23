@@ -17,7 +17,7 @@ build:
   ci:
     - ps -eax
     - ls -al
-    - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
+  #  - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
     
   post_ci:
     #- docker build --rm -t=shippabledocker/varsha-postci-node .
