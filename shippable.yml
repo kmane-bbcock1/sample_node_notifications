@@ -17,6 +17,7 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - git clone git@bitbucket.org:shihitchcock6/sample_node
  #   - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
 integrations:
