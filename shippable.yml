@@ -4,6 +4,7 @@ language: node_js
 # Version number
 node_js:
   - 0.12
+  - 0.10.25
   
 env:
   global:
@@ -11,21 +12,55 @@ env:
 
   matrix:
     - M1=ONE
+    - M2=TWO
 
 build:
 
   ci:
     - ps -eax
     - ls -al
-    - git clone git@bitbucket.org:shihitchcock6/sample_node
+    - sleep 15m
+   # - git clone git@bitbucket.org:shihitchcock6/sample_node
  #   - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
 
-integrations:
+ntegrations:
   notifications:
+    - integrationName: email
+      type: email
+      recipients: 
+        - shiphitchcock1@gmail.com
+        - varsha@shippable.com
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
+    - integrationName: ship-slack
+      type: slack
+      recipients:
+        - "#hitchcock1-public"
+        - pvt-channel
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+      
     - integrationName: irc
       type: irc
       recipients:
-        - "chat.freenode.net#test-cock"
-     # on_start: always
+        - "chat.freenode.net#test-cock1"
+      on_start: always
       on_success: always
-     # on_failure: never  
+      on_failure: always
+      on_pull_request: always
+      
+    - integrationName: ship-hipchat
+      type: hipchat
+      recipients:
+        - '#hitchcock1'
+        - '#hitchcock1pvt'
+        - '@shiphitchcock1'
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always 
