@@ -20,10 +20,10 @@ build:
     - ls -al
     - if [ "$SHIPPABLE_NODE_VERSION" == "0.12" ]; then foobar; fi
     
-  post_ci:
+  #post_ci:
     #- docker build --rm -t=shippabledocker/varsha-postci-node .
-    - docker tag -f drydock/u14nod:prod shippabledocker/varsha-postci-node123
-    - docker push shippabledocker/varsha-postci-node123
+    #- docker tag -f drydock/u14nod:prod shippabledocker/varsha-postci-node123
+    #- docker push shippabledocker/varsha-postci-node123
 
 integrations:
   hub:
